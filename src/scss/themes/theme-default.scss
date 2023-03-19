@@ -254,7 +254,8 @@
 
         @include media-breakpoint-down(lg) {
             .content {
-                height: calc(90vh - 150px);
+                //height: calc(90vh - 150px);
+                height: calc(90vh - 170px);
             }
         }
 
@@ -265,7 +266,7 @@
             border-top: 1px solid #a8a8a8;
             transition: 0.5s;
         }
-        
+
         .nav_logo,
         .nav_link {
             display: grid;
