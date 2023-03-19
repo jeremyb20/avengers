@@ -255,7 +255,8 @@
         @include media-breakpoint-down(lg) {
             .content {
                 //height: calc(90vh - 150px);
-                height: calc(90vh - 170px);
+                //height: calc(90vh - 170px);
+                height: 610px;
             }
         }
 
