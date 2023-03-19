@@ -16,7 +16,7 @@
       <span class="col-12 text-light mb-2"> {{nameUser}} </span>
       <span class="col-12 balance "> Balance > <span class="text-success"> $5000</span> </span>
     </div>
-    <div [ngClass]="{'offcanvas-body' : Media.IsMobile}">
+    <div [ngClass]="{'offcanvas-body testoffcanvas' : Media.IsMobile}">
       <div *ngIf="navigation" class="content">
         <div aria-label="navigation" class="nav">
           <div class="nav_list my-1" [ngClass]="{'offcanvas': !Media.IsMobile, 'd-none' : !item.hasPermission}" *ngFor="let item of navigation; let i = index" #itemEl style="width: -webkit-fill-available;   width: -moz-available;">

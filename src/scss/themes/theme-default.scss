@@ -268,6 +268,12 @@
             transition: 0.5s;
         }
 
+        .testoffcanvas{
+            position: absolute;
+            height: 68vh;
+            top: 190px;
+        }
+
         .nav_logo,
         .nav_link {
             display: grid;
