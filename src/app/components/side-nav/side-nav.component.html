@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="footer">
+      <div class="footer" [ngStyle]="{'width': isExpanded && !Media.IsMobile ? '220px': Media.IsMobile ? '320px' : '50px'}">
         <div class="dropdown py-2 dropup">
           <a href="/opciones" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle ms-1 text-center fw-bold" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <ng-container *ngIf="Media.IsMobile"> <span class="ms-2">Version {{version}}</span> </ng-container>

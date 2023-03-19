@@ -88,7 +88,63 @@ export const NAVIGATION: Navigation[] = [
     showInToolbar: true,
     showInSideNav: true,
     isNew: true,
-    EISubMenu: []
+    EISubMenu: [
+      {
+        Id:34,
+        routerLink: '/e-sports',
+        iconClass: 'fas fa-gamepad',
+        translate: 'USER.NAVBAR.E_SPORTS',
+        hasPermission: true,
+        showInToolbar: true,
+        showInSideNav: true,
+        isNew: false,
+        EISubMenu: []
+      },
+      {
+        Id:34,
+        routerLink: '/live-wager',
+        iconClass: 'fas fa-wifi',
+        translate: 'USER.NAVBAR.LIVE_WAGER',
+        hasPermission: true,
+        showInToolbar: true,
+        showInSideNav: true,
+        isNew: false,
+        EISubMenu: []
+      },
+      {
+        Id:34,
+        routerLink: '/casino',
+        iconClass: 'fas fa-dice',
+        translate: 'USER.NAVBAR.CASINO',
+        hasPermission: true,
+        showInToolbar: true,
+        showInSideNav: true,
+        isNew: false,
+        EISubMenu: []
+      }, 
+      {
+        Id:34,
+        routerLink: '/props-builder',
+        iconClass: 'fas fa-tools',
+        translate: 'USER.NAVBAR.PROPS_BUILDER',
+        hasPermission: true,
+        showInToolbar: true,
+        showInSideNav: true,
+        isNew: false,
+        EISubMenu: []
+      },
+      {
+        Id:34,
+        routerLink: '/racebook',
+        iconClass: 'fas fa-horse-head',
+        translate: 'USER.NAVBAR.RACEBOOK',
+        hasPermission: true,
+        showInToolbar: true,
+        showInSideNav: true,
+        isNew: false,
+        EISubMenu: []
+      }
+    ]
   },
   {
     Id:34,
