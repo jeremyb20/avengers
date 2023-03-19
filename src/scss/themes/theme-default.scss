@@ -259,9 +259,9 @@
         }
 
         .footer {
-            position: absolute;
+            position: fixed;
             bottom: 0;
-            width: 100%;
+            width: 320px;
             background-color: var(--quaternary-bg-color);
             border-top: 1px solid #a8a8a8;
         }
