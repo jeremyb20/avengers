@@ -2,11 +2,13 @@
   "name": "betslip-fe",
   "version": "0.0.0",
   "scripts": {
+    "start": "node index.js",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "npm install @tusharghoshbd/ngx-datatable@1.3.3 --force --no-save ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "dev": "nodemon index.js"
   },
   "engines": {
     "node": "16.13.0",
