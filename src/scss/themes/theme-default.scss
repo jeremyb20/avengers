@@ -254,8 +254,6 @@
 
         @include media-breakpoint-down(lg) {
             .content {
-                //height: calc(90vh - 150px);
-                //height: calc(90vh - 170px);
                 height: 500px;
             }
         }
@@ -268,7 +266,7 @@
             transition: 0.5s;
         }
 
-        .testoffcanvas{
+        .offcanvas-height{
             position: absolute;
             height: 68vh;
             top: 190px;

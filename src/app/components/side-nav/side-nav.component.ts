@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, OnInit, ElementRef } from "@angular/core";
+import { Component, EventEmitter, Input, Output, ElementRef } from "@angular/core";
 import { Router } from "@angular/router";
 import { Subscription } from "rxjs";
 import { AuthService } from "src/app/services/auth/auth.service";
@@ -24,7 +24,7 @@ const DEFAULT_DURATION = 200;
   ]
 })
 
-export class SideNavComponent implements OnInit {
+export class SideNavComponent {
   public version: string = packageJson.version;
   @Input() isExpanded: boolean = false;
   @Output() toggleSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -64,20 +64,12 @@ export class SideNavComponent implements OnInit {
     }, 1000)
   }
 
-  ngOnInit() {
-    //oninit
-  }
-
   toggle(i:any){
     this.openAccordion[i] = !this.openAccordion[i];
   }
 
   getActualRoute(){
     this.actualRouter = this._authService.getRouterLink();
-  }
-
-  goToDashboard() {
-    this.router.navigate(['/dashboard'])
   }
 
   logout(){

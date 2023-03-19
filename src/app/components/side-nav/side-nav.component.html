@@ -1,7 +1,7 @@
 <div class="sidebar" [ngClass]="{ 'expanded': isExpanded, 'offcanvas offcanvas-start': Media.IsMobile }" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="header shadow-lg" [ngClass]="{'offcanvas-header': Media.IsMobile}">
       <div class="title">
-        <span tabindex="-1" style="cursor: pointer;" (click)="goToDashboard()">
+        <span tabindex="-1" style="cursor: pointer;" data-bs-dismiss="offcanvas" (click)="goTo('/dashboard')">
           <img src="../../../assets/images/slogan-white.png" class="w-100 rounded mb-1" alt="test"/>
         </span>
       </div>
@@ -16,7 +16,7 @@
       <span class="col-12 text-light mb-2"> {{nameUser}} </span>
       <span class="col-12 balance "> Balance > <span class="text-success"> $5000</span> </span>
     </div>
-    <div [ngClass]="{'offcanvas-body testoffcanvas' : Media.IsMobile}">
+    <div [ngClass]="{'offcanvas-body offcanvas-height' : Media.IsMobile}">
       <div *ngIf="navigation" class="content">
         <div aria-label="navigation" class="nav">
           <div class="nav_list my-1" [ngClass]="{'offcanvas': !Media.IsMobile, 'd-none' : !item.hasPermission}" *ngFor="let item of navigation; let i = index" #itemEl style="width: -webkit-fill-available;   width: -moz-available;">
@@ -52,8 +52,8 @@
             <ng-container *ngIf="!Media.IsMobile"> <span *ngIf="!isExpanded" class="ms-2"><i class="fas fa-cog" aria-hidden="true"></i></span> </ng-container>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-left" aria-labelledby="dropdownUser1">
-              <li><a class="dropdown-item" [routerLink]="'/profile'"><i class='fas fa-user nav_icon me-2'></i> Perfil</a></li>
-              <li><a class="dropdown-item" [routerLink]="'/configuration'"><i class="fas fa-cog nav_icon me-2"></i> Configuración</a></li>
+              <li><a class="dropdown-item" data-bs-dismiss="offcanvas" [routerLink]="'/profile'"><i class='fas fa-user nav_icon me-2'></i> Perfil</a></li>
+              <li><a class="dropdown-item" data-bs-dismiss="offcanvas" [routerLink]="'/configuration'"><i class="fas fa-cog nav_icon me-2"></i> Configuración</a></li>
               <li>
                   <hr class="dropdown-divider">
               </li>

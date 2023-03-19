@@ -263,16 +263,22 @@
 
         @include media-breakpoint-down(lg) {
             .content {
-                height: calc(90vh - 150px);
+                height: 500px;
             }
         }
 
         .footer {
-            position: absolute;
+            position: fixed;
             bottom: 0;
-            width: 100%;
             background-color: var(--quaternary-bg-color);
             border-top: 1px solid #a8a8a8;
+            transition: 0.5s;
+        }
+
+        .offcanvas-height{
+            position: absolute;
+            height: 68vh;
+            top: 190px;
         }
 
         .nav_logo,
