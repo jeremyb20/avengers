@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm intall --force ng build",
+    "build": "npm install @tusharghoshbd/ngx-datatable@1.3.3 --force --no-save ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
