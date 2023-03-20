@@ -258,21 +258,10 @@
             }
         }
 
-        @include media-breakpoint-down(md) {
-            .content {
-                height: 450px;
-            }
-        }
-
         @include media-breakpoint-down(sm) {
             .content {
-                height: 410px;
-            }
-        }
-
-        @include media-breakpoint-down(xs) {
-            .content {
-                height: 400px;
+                height: 425px;
+                padding-bottom: 2rem;
             }
         }
 
@@ -286,7 +275,7 @@
 
         .offcanvas-height{
             position: absolute;
-            height: 68vh;
+            // height: 68vh;
             top: 190px;
         }
 
