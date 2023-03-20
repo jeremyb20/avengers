@@ -255,6 +255,7 @@
         @include media-breakpoint-down(lg) {
             .content {
                 height: 500px;
+                padding-bottom: 5rem;
             }
         }
 
