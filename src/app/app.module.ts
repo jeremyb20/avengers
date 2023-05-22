@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgHttpLoaderModule } from 'ng-http-loader';
@@ -56,6 +56,7 @@ import { ContestComponent } from './core/main/contest/contest.component';
 import { CockfightComponent } from './core/main/cockfight/cockfight.component';
 import { VirtualSportsComponent } from './core/main/virtual-sports/virtual-sports.component';
 import { PokerComponent } from './core/main/poker/poker.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -129,7 +130,13 @@ export function tokenGetter() {
     NgbModule,
     ChartsModule,
     ZXingScannerModule,
-    QRCodeModule
+    QRCodeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
 
   providers: [
