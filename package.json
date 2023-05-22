@@ -11,8 +11,8 @@
     "dev": "nodemon index.js"
   },
   "engines": {
-    "node": "18.10.0",
-    "npm": "8.19.2"
+    "node": "16.13.0",
+    "npm": "8.1.0"
   },
   "private": true,
   "dependencies": {
