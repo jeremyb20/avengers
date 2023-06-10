@@ -35,7 +35,7 @@
     "@types/qrcode": "^1.4.2",
     "@zxing/browser": "^0.1.1",
     "@zxing/library": "^0.19.1",
-    "@zxing/ngx-scanner": "^3.5.0",
+    "@zxing/ngx-scanner": "3.5.0",
     "angularx-qrcode": "^10.0.10",
     "animate.css": "^4.1.1",
     "autoprefixer": "10.4.5",
