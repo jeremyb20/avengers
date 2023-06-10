@@ -11,7 +11,7 @@
     "dev": "nodemon index.js"
   },
   "engines": {
-    "node": "16.13.0",
+    "node": "v16.13.0",
     "npm": "8.1.0"
   },
   "private": true,
@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
     "@auth0/angular-jwt": "^5.0.2",
-    "@ng-bootstrap/ng-bootstrap": "^14.2.0",
+    "@ng-bootstrap/ng-bootstrap": "14.0.0",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "@popperjs/core": "^2.10.2",
