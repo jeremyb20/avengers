@@ -19,7 +19,7 @@
     <div [ngClass]="{'offcanvas-body offcanvas-height' : Media.IsMobile}">
       <div *ngIf="navigation" class="content">
         <div aria-label="navigation" class="nav">
-          <div class="nav_list my-1" [ngClass]="{'offcanvas': !Media.IsMobile, 'd-none' : !item.hasPermission}" *ngFor="let item of navigation; let i = index" #itemEl style="width: -webkit-fill-available;   width: -moz-available;">
+          <div class="nav_list my-1" *ngFor="let item of navigation; let i = index" #itemEl style="width: -webkit-fill-available;   width: -moz-available;">
             <div *ngIf="item.hasPermission">
               <div *ngIf="item.showInSideNav">
                 <span style="cursor: pointer;" tabindex="-1" data-bs-dismiss="offcanvas" *ngIf="item.EISubMenu.length == 0" (click)="goTo(item.routerLink)" [routerLinkActive]="['active']" [ngClass]="{'active': actualRouter == item.routerLink}" class="nav_link text-uppercase"> <i class='{{item.iconClass}} nav_icon' ></i> <span class="nav_name">{{ item.translate | translate }} <span *ngIf="item.isNew" class="badge badge-info bg-danger text-sm" style="font-size: 9px; z-index: 100;">New</span></span>  </span>

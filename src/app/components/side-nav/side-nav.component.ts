@@ -59,6 +59,8 @@ export class SideNavComponent {
       this.Media = media;
     });
 
+    console.log(this.navigation)
+
     setInterval(() => {
       this.getActualRoute();
     }, 1000)

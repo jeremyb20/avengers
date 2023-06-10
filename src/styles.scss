@@ -10,8 +10,21 @@
 @import './scss/themes/theme-premium.scss';
 @import './scss/themes/theme-gradient.scss';
 @import './scss/themes/theme-ibetsport-light.scss';
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+
+:root {
+  --primary-color: #fff;
+  --bs-body-bg: #354152 !important;
+  --bs-btn-bg: #1c5eac;
+  --background: var(--bs-body-bg) !important;
+  --background-color: var(--bs-body-bg) !important;
+  --text-color: #2d2d2d;
+  --bg: #fffdf2;
+  min-height: 100vh;
+}
+
+.btn {
+  background-color: var(--bs-btn-bg) !important;
+}
 
 body {
   background: var(--background);
@@ -24,15 +37,6 @@ body {
 
 a {
   text-decoration: none
-}
-
-:root {
-  --primary-color: #fff;
-  --background-color: #354152;
-  --background: #354152;
-  --text-color: #2d2d2d;
-  --bg: #fffdf2;
-  min-height: 100vh;
 }
 
 .input-group-text {
@@ -81,7 +85,7 @@ a {
   
 
   ::placeholder {
-    color: #fff;
+    color: #fff !important;
     opacity: 1;
   }
 
@@ -197,21 +201,20 @@ input:-webkit-autofill:active{
 }
 
 
-.btn-home {
-  border: 2px solid var(--color-blue);
-  background-color: var(--color-blue);
-  color: #fff;
+.btn-primary {
+  border: 2px solid var(--bs-btn-bg) !important;
+  color: #fff !important;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-.btn-home:hover {
+.btn-primary:hover {
   background-color: #1076bb;
   border: 2px solid #1076bb;
   color: #fff;
 }
 
-.btn-home:active {
+.btn-primary:active {
   background-color: #1076bb !important;
   border: 2px solid #1076bb;
   color: #fff;
@@ -368,3 +371,5 @@ color: #fff!important;
   max-width: 250px;
   font-size: 12px;
 }
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
