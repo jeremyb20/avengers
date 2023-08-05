@@ -57,6 +57,7 @@ import { CockfightComponent } from './core/main/cockfight/cockfight.component';
 import { VirtualSportsComponent } from './core/main/virtual-sports/virtual-sports.component';
 import { PokerComponent } from './core/main/poker/poker.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -132,7 +133,7 @@ export function tokenGetter() {
     ZXingScannerModule,
     QRCodeModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
+      enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
